@@ -1,0 +1,7 @@
+C:\Users\Usuario\Desktop\TP1 Antonio Bentosela\TP1 Antonio Bentosela\bin\Debug\TP1 Antonio Bentosela.exe.config
+C:\Users\Usuario\Desktop\TP1 Antonio Bentosela\TP1 Antonio Bentosela\bin\Debug\TP1 Antonio Bentosela.exe
+C:\Users\Usuario\Desktop\TP1 Antonio Bentosela\TP1 Antonio Bentosela\bin\Debug\TP1 Antonio Bentosela.pdb
+C:\Users\Usuario\Desktop\TP1 Antonio Bentosela\TP1 Antonio Bentosela\obj\Debug\TP1 Antonio Bentosela.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP1 Antonio Bentosela\TP1 Antonio Bentosela\obj\Debug\TP1 Antonio Bentosela.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP1 Antonio Bentosela\TP1 Antonio Bentosela\obj\Debug\TP1 Antonio Bentosela.exe
+C:\Users\Usuario\Desktop\TP1 Antonio Bentosela\TP1 Antonio Bentosela\obj\Debug\TP1 Antonio Bentosela.pdb
