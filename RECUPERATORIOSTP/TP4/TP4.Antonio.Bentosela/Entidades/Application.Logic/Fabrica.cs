@@ -29,29 +29,26 @@ namespace Entidades
         /// <returns>Devuelve true si se pudo fabricar, false si no se pudo fabricar.</returns>
         public bool FabricarProducto(Producto p)
         {
-            hilo = new Thread(p.MockFabricacion);
-            hilo.Start();
 
             if (!(p is null))
-             {
-                 
-                 p.Stock++;
-                 return true;
-             }
-             else
-             {
+            {
+                hilo = new Thread(p.CambiarEstado);
+                hilo.Start();
+
+                p.Stock++;
+                return true;
+            }
+            else
+            {
                  throw new LogicException("No existe ningun producto");
-             }          
+            }          
         }
 
         public void CerrarHilo() 
         {
-            if (hilo != null)
-            {
-                if (!hilo.IsAlive)
-                {
-                    hilo.Abort();
-                }
+            if (hilo != null && hilo.IsAlive)
+            {           
+                hilo.Abort();                
             }
 
     
@@ -61,13 +58,13 @@ namespace Entidades
         /// </summary>
         /// <param name="f"></param>
         /// <returns>Devuelve un string con todos los datos</returns>
-        public static string InformeDeProductos(Fabrica f)
+        public static string InformarProductos(Fabrica f)
         {
             StringBuilder sb = new StringBuilder();
 
             foreach (Producto info in f.productos)
             {
-                sb.AppendLine("Producto:" + info.Informacion());
+                sb.AppendLine("Producto:" + info.Informar());
             }
             return sb.ToString();
         }

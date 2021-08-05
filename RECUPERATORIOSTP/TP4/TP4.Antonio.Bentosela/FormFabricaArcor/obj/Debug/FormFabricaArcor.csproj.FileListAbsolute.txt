@@ -37,3 +37,16 @@ C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFa
 C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.csproj.CopyComplete
 C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.exe
 C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.pdb
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\bin\Debug\FormFabricaArcor.exe.config
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\bin\Debug\FormFabricaArcor.exe
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\bin\Debug\FormFabricaArcor.pdb
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\bin\Debug\Entidades.dll
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\bin\Debug\Entidades.pdb
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.csproj.AssemblyReference.cache
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.FabricaArcor.resources
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.Properties.Resources.resources
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.csproj.GenerateResource.cache
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.csproj.CopyComplete
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.exe
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\FormFabricaArcor\obj\Debug\FormFabricaArcor.pdb

@@ -139,7 +139,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Guardar SQL";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnGuardarSql_Click);
             // 
             // FabricaArcor
             // 

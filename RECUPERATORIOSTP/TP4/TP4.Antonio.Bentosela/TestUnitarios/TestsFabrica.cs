@@ -16,7 +16,7 @@ namespace TestUnitarios
 
             //Act
             fabrica.productos.Add(producto);
-            string info = Fabrica.InformeDeProductos(fabrica);
+            string info = Fabrica.InformarProductos(fabrica);
 
             //Assert
             Assert.IsTrue(info is string);

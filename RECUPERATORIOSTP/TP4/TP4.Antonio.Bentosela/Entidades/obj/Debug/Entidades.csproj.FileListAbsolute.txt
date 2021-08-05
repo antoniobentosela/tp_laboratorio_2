@@ -16,3 +16,9 @@ C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\Entidades\obj\Debug\Entidades.csp
 C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\Entidades\obj\Debug\Entidades.dll
 C:\Users\Antonio\Desktop\TP3.Antonio.Bentosela\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\bin\Debug\Entidades.dll
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.dll
+C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.pdb

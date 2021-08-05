@@ -16,10 +16,6 @@ namespace Entidades
             get { return this.stockPaletas; }
             set { this.stockPaletas = value; }
         }
-        public override bool EsCongelado 
-        {
-            get { return true; }       
-        }
         #endregion
 
         #region Constructores
@@ -41,11 +37,11 @@ namespace Entidades
         /// </summary>
         /// <returns>Retorna un string con los datos</returns>
 
-        public override string Informacion()
+        public override string Informar()
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.Append($"{base.Informacion()}");
+            sb.Append($"{base.Informar()}");
             sb.AppendLine($"Stock: {this.Stock}");
 
             return sb.ToString();

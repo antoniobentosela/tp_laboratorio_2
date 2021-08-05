@@ -27,7 +27,7 @@ namespace Entidades
 
         }
 
-        public void MockFabricacion() 
+        public void CambiarEstado() 
         {
             while (this.estado != Producto.EEstado.Fabricado)
             {
@@ -38,17 +38,17 @@ namespace Entidades
                         this.InformaEstado(this, EventArgs.Empty);
                         break;
                     case Producto.EEstado.RecolectandoIngredientes:
-                        Thread.Sleep(2000);
+                        Thread.Sleep(1000);
                         this.estado = Producto.EEstado.Elaborando;
                         this.InformaEstado(this, EventArgs.Empty);
                         break;
                     case Producto.EEstado.Elaborando:
-                        Thread.Sleep(2000);
+                        Thread.Sleep(1000);
                         this.estado = Producto.EEstado.Empaquetando;
                         this.InformaEstado(this, EventArgs.Empty);
                         break;
                     case Producto.EEstado.Empaquetando:
-                        Thread.Sleep(2000);
+                        Thread.Sleep(1000);
                         this.estado = Producto.EEstado.Fabricado;
                         this.InformaEstado(this, EventArgs.Empty);
                         break;
@@ -57,17 +57,24 @@ namespace Entidades
                 }
 
             }
+            this.estado = EEstado.SinComenzar;
 
         }
 
         #region Propiedades        
-        public abstract int Stock { get; set; }
-        public abstract bool EsCongelado { get; }
+        public abstract int Stock { get; set; }       
         public string CodigoBarra
         {
             get { return this.codigoBarra; }
             set { this.codigoBarra = value; }
         }
+
+        public EEstado Estado
+        {
+            get { return this.estado; }
+            
+        }
+
         public string Nombre
         {
             get { return this.nombre; }
@@ -105,16 +112,12 @@ namespace Entidades
         /// Este metodo se encarga de Crear un StringBuilder con toda la informacion del Producto
         /// </summary>
         /// <returns>Retorna el StringBuilder en formato string</returns>
-        public virtual string Informacion()
+        public virtual string Informar()
         {
-            string congelado;
-
+            
             StringBuilder sb = new StringBuilder();
-
-            if (this.EsCongelado) { congelado = "SI"; } else { congelado = "NO"; };
-
-            sb.AppendLine($"Nombre:{this.nombre}");
-            sb.AppendLine($"Es Congelado:{congelado}");
+           
+            sb.AppendLine($"Nombre:{this.nombre}");            
             sb.AppendFormat("Codigo De Barras: {0} \n", codigoBarra);
 
             return sb.ToString();

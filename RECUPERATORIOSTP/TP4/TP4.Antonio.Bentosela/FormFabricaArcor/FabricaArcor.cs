@@ -38,12 +38,18 @@ namespace FormFabricaArcor
             Paleta p1 = new Paleta("Paleta Dulce De Leche", "222K3ST");
             Paleta p2 = new Paleta("Paleta Chocolate", "RTY5678");
             Cucurucho p3 = new Cucurucho("Cucurucho Pico Dulce", "HJ1T459");
-            Cucurucho p4 = new Cucurucho("Cucurucho Bon o Bon(Golosina)", "ZJJTT11");
+            Cucurucho p4 = new Cucurucho("Cucurucho Bon o Bon", "ZJJTT11");
+
+            p1.InformaEstado += proInformarEstado;
+            p2.InformaEstado += proInformarEstado;
+            p3.InformaEstado += proInformarEstado;
+            p4.InformaEstado += proInformarEstado;
 
             this.ListaProductos.Items.Add(p1);
             this.ListaProductos.Items.Add(p2);
             this.ListaProductos.Items.Add(p3);
             this.ListaProductos.Items.Add(p4);
+
             fabrica.productos.Add(p1);
             fabrica.productos.Add(p2);
             fabrica.productos.Add(p3);
@@ -59,8 +65,7 @@ namespace FormFabricaArcor
         {                         
             try
             {
-                producto = this.ListaProductos.SelectedItem as Producto;
-                producto.InformaEstado += pro_InformaEstado;
+                producto = this.ListaProductos.SelectedItem as Producto;              
                 fabrica.FabricarProducto(this.ListaProductos.SelectedItem as Producto);
                 contador++;
             }
@@ -73,7 +78,7 @@ namespace FormFabricaArcor
         public void ActualizarEstados()
         {
 
-            switch (producto.estado)
+            switch (producto.Estado)
             {
                 case Producto.EEstado.RecolectandoIngredientes:
                     this.label1.Text = "Recolectando Ingredientes...";
@@ -93,11 +98,11 @@ namespace FormFabricaArcor
             }           
         }
 
-        public void pro_InformaEstado(object sender, EventArgs e)
+        public void proInformarEstado(object sender, EventArgs e)
         {
             if (this.InvokeRequired)
             {
-                Producto.DelegadoEstado d = new Producto.DelegadoEstado(pro_InformaEstado);
+                Producto.DelegadoEstado d = new Producto.DelegadoEstado(proInformarEstado);
                 this.Invoke(d, new object[] { sender, e });
             }
             else
@@ -115,7 +120,7 @@ namespace FormFabricaArcor
             Producto p = this.ListaProductos.SelectedItem as Producto;
             try
             {
-                Listado.Text = p.Informacion();
+                Listado.Text = p.Informar();
             }
             catch (Exception ex)
             {
@@ -170,7 +175,7 @@ namespace FormFabricaArcor
         {
             try
             {
-                Listado.Text = Fabrica.InformeDeProductos(fabrica);
+                Listado.Text = Fabrica.InformarProductos(fabrica);
             }
             catch (Exception ex)
             {
@@ -183,11 +188,17 @@ namespace FormFabricaArcor
             fabrica.CerrarHilo();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnGuardarSql_Click(object sender, EventArgs e)
         {
             try
             {
-                DBConnection.GuardarMaterial(contador);
+                foreach (Producto p in fabrica.productos) 
+                {                 
+                    DBConnection.GuardarMaterial(p);                   
+                }
+
+                MessageBox.Show("Se guardaron los datos correctamente.");
+                
             }
             catch (Exception ex) 
             {

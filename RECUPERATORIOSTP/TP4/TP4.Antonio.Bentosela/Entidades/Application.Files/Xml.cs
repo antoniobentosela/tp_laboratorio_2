@@ -16,8 +16,6 @@ namespace Entidades
             XmlTextWriter writer = null;
             XmlSerializer serializer = null;
 
-            if (data is Cucurucho) 
-            {
                 try
                 {
                     writer = new XmlTextWriter(file, Encoding.UTF8);
@@ -36,9 +34,10 @@ namespace Entidades
                         writer.Close();
                     }
                 }
-            }
-          
             return true;
         }
+          
+            
     }
 }
+

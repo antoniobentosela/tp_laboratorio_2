@@ -15,30 +15,48 @@ namespace Entidades.Application.Logic
         /// <param name="dato">numero de cuantos fueron atendidos</param>
         /// <param name="dato2">numero de cuantos no fueron atendidos</param>
         /// <returns>true or false</returns>
-        public static bool GuardarMaterial(int dato)
+        public static bool GuardarMaterial(Producto p)
         {
-            String connectionStr = @"Data Source=.;Initial Catalog = BaseFabrica; Integrated Security = True";
+            String connectionStr = @"Data Source=.;Initial Catalog = BaseFabrica7; Integrated Security = True";
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionStr))
-                {
-                    connection.Open();
-                    SqlCommand comando;
-                    comando = new SqlCommand();
-                    comando.CommandType = System.Data.CommandType.Text;
-                    comando.Connection = connection;
+                {                   
                     String consulta;
+                    
+                    consulta = $"SELECT * FROM dbo.Fabricados WHERE nombre = @nombre";
 
-                    consulta = $"INSERT INTO Fabricados (Fabricados)  VALUES ({dato})";
-                    comando.CommandText = consulta;                   
-                    comando.ExecuteNonQuery();
-                    connection.Close();
+                    using (SqlCommand command = new SqlCommand(consulta, connection))
+                    {
+                        command.Parameters.AddWithValue("@nombre", p.Nombre);
+                        connection.Open();
+                        SqlDataReader lector = command.ExecuteReader();
+
+                        while (lector.Read())
+                        {
+                            int stock = int.Parse(lector["stock"].ToString());
+                            p.Stock += stock;
+                        }
+                        lector.Close();
+                    }
+
+                    consulta = $"UPDATE dbo.Fabricados SET stock=@stock WHERE nombre = @nombre";
+                    
+                    using (SqlCommand command = new SqlCommand(consulta, connection))
+                    {
+                        command.Parameters.AddWithValue("@nombre", p.Nombre);                        
+                        command.Parameters.AddWithValue("@stock", p.Stock);                        
+                                         
+                        int result = command.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    
                     return true;
                 }
             }
-            catch (Exception ex)
-            {
-                throw ex;
+            catch (LogicException)
+            {                 
+                throw new LogicException("No se pudo guardar");                
             }
         }
     }

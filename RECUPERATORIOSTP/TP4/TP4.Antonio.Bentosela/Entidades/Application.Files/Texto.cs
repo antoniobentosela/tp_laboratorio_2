@@ -19,10 +19,9 @@ namespace Entidades
                 {
                     foreach (Producto prod in data)
                     {
-                        if (prod is Paleta) 
-                        {
-                           sw.WriteLine(prod.ToString());
-                        }                        
+
+                        sw.WriteLine(prod.ToString());
+                                               
                     }
                     retorno = true;
                 }
