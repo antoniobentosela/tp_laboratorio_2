@@ -22,3 +22,9 @@ C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades
 C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.dll
 C:\Users\Antonio\Desktop\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Antonio\Desktop\tp_laboratorio_2\RECUPERATORIOSTP\TP4\TP4.Antonio.Bentosela\Entidades\bin\Debug\Entidades.dll
+C:\Users\Antonio\Desktop\tp_laboratorio_2\RECUPERATORIOSTP\TP4\TP4.Antonio.Bentosela\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Antonio\Desktop\tp_laboratorio_2\RECUPERATORIOSTP\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Antonio\Desktop\tp_laboratorio_2\RECUPERATORIOSTP\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\Desktop\tp_laboratorio_2\RECUPERATORIOSTP\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.dll
+C:\Users\Antonio\Desktop\tp_laboratorio_2\RECUPERATORIOSTP\TP4\TP4.Antonio.Bentosela\Entidades\obj\Debug\Entidades.pdb

@@ -26,7 +26,9 @@ namespace Entidades
             Fabricado
 
         }
-
+        /// <summary>
+        /// Metodo para cambiar el estado del producto en el momento que se ejecuta el hilo.
+        /// </summary>
         public void CambiarEstado() 
         {
             while (this.estado != Producto.EEstado.Fabricado)

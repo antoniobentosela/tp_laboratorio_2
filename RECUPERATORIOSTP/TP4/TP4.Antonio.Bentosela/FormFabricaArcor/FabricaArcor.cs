@@ -75,6 +75,9 @@ namespace FormFabricaArcor
             }     
         }
 
+        /// <summary>
+        /// Metodo que se encarga de cambiar el label dependiendo el estado del producto para informar el paso a paso de la fabricacion.
+        /// </summary>
         public void ActualizarEstados()
         {
 
@@ -98,6 +101,11 @@ namespace FormFabricaArcor
             }           
         }
 
+        /// <summary>
+        /// Metodo que se encarga de cambiar el hilo secundario dependiendo la instancia en la que me encuentro.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void proInformarEstado(object sender, EventArgs e)
         {
             if (this.InvokeRequired)
